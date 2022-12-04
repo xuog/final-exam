@@ -4,13 +4,11 @@ $(function () {
     $('#c-modal-wrapper').load('/page/main/department/modal/create.html');
     $('#u-modal-wrapper').load('/page/main/department/modal/update.html');
     $('#d-modal-wrapper').load('/page/main/department/modal/delete.html');
+
+    if (sessionStorage.getItem('role') == 'ADMIN') {
         $('#btn-add').show();
         $('#btn-edit').show();
         $('#btn-delete').show();
-    if (sessionStorage.getItem('role') == 'ADMIN') {
-//        $('#btn-add').show();
-//        $('#btn-edit').show();
-//        $('#btn-delete').show();
     } else if (sessionStorage.getItem('role') == 'MANAGER') {
         $('#btn-add').show();
         $('#btn-edit').show();

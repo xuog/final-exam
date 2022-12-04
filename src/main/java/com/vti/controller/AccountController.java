@@ -6,8 +6,6 @@ import com.vti.form.AccountCreateForm;
 import com.vti.form.AccountFilterForm;
 import com.vti.form.AccountUpdateForm;
 import com.vti.service.IAccountService;
-import lombok.Getter;
-import lombok.Setter;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,8 +49,9 @@ public class AccountController {
         form.setId(id);
         service.update(form);
     }
-    @DeleteMapping("/{id}")
-    public void deleteById(@PathVariable("id") int id){
-        service.deleteById(id);
+    @DeleteMapping
+    public void deleteAllByIdInBatch(@RequestBody List<Integer> ids){
+
+        service.deleteAllById(ids);
     }
 }

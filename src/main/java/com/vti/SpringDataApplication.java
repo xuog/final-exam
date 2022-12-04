@@ -1,5 +1,7 @@
 package com.vti;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
 import com.vti.entity.Account;
 import com.vti.form.AccountCreateForm;
 import org.modelmapper.ModelMapper;
@@ -24,5 +26,13 @@ public class SpringDataApplication {
         return modelMapper;
 
     }
+    // dùng để chuyển object thành string
+    @Bean
+    public ObjectWriter objectWriter() {
+        return new ObjectMapper()
+                .findAndRegisterModules()
+                .writerWithDefaultPrettyPrinter();
+    }
+
 
 }

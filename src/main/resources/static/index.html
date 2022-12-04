@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>KShop - Quản lý phòng ban</title>
+        <title>ĐShop - Quản lý phòng ban</title>
 
         <!-- Bootstrap 5.2.1 -->
         <link
@@ -60,7 +60,7 @@
                     const language = sessionStorage.getItem('language');
                     jqXHR.setRequestHeader('Accept-Language', language ?? 'vi');
                 });
-$('#main').load('/page/main/index.html');
+
                 $.ajax({
                     method: 'GET',
                     url: 'http://localhost:8080/api/v1/auth/login',
