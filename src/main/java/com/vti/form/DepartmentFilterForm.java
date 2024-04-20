@@ -21,5 +21,5 @@ public class DepartmentFilterForm {
 
     private Integer minCreatedYear;
 
-    private Department.Type type;
+    //private Department.Type type;
 }

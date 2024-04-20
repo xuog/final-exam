@@ -30,9 +30,9 @@ public class Department {
     @Column(name = "total_members", nullable = false)
     private Integer totalMembers;
 
-    @Column(name = "type", nullable = false, length = 15)
-    @Enumerated(value = EnumType.STRING)
-    private Type type;
+//    @Column(name = "type", nullable = false, length = 15)
+//    @Enumerated(value = EnumType.STRING)
+//    private Type type;
 
     @CreationTimestamp
     @Column(name = "created_at", nullable = false, updatable = false)
@@ -46,7 +46,7 @@ public class Department {
     private List<Account> accounts;
 
 
-    public enum Type {
-        DEVELOPER, TESTER, SCRUM_MASTER, PROJECT_MANAGER
-    }
+//    public enum Type {
+//        DEVELOPER, TESTER, SCRUM_MASTER, PROJECT_MANAGER
+//    }
 }

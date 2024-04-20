@@ -10,5 +10,5 @@ public class DepartmentUpdateForm {
     private Integer id;
     private String name;
     private Integer totalMembers;
-    private Department.Type type;
+    //private Department.Type type;
 }

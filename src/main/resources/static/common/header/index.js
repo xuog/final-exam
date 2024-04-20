@@ -10,7 +10,7 @@ $(function () {
 
     // Load text by language
     $('#btn-search').append(_.header_search);
-    $('#input-search').attr('placeholder', _.header_search);
+    // $('#input-search').attr('placeholder', _.header_search);
     $('#btn-change-password').append(_.header_change_password);
     $('#btn-logout').append(_.header_logout);
     $('#btn-login').append(_.header_login);

@@ -16,7 +16,7 @@ public class DepartmentDTO extends RepresentationModel<DepartmentDTO> {
     private Integer id;
     private String name;
     private Integer totalMembers;
-    private Department.Type type;
+    //private Department.Type type;
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createdAt;

@@ -50,9 +50,9 @@ public class DepartmentSpecification {
                         builder.function("YEAR", Integer.class, root.get("createdAt")),
                         form.getMinCreatedYear()));
             }
-            if (form.getType() != null) {
-                predicates.add(builder.equal(root.get("type"), form.getType()));
-            }
+//            if (form.getType() != null) {
+//                predicates.add(builder.equal(root.get("type"), form.getType()));
+//            }
             return builder.and(predicates.toArray(new Predicate[0]));
         };
     }

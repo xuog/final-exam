@@ -44,15 +44,15 @@
                             Số lượng nhân viên phải lớn hơn hoặc bằng 0.
                         </small>
                     </div>
-                    <div class="mb-3">
-                        <label for="u-type" class="form-label fw-bold">Loại phòng ban</label>
-                        <select class="form-select form-select-sm" name="u-type" id="u-type">
-                            <option value="DEVELOPER" selected>DEVELOPER</option>
-                            <option value="TESTER">TESTER</option>
-                            <option value="SCRUM_MASTER">SCRUM MASTER</option>
-                            <option value="PROJECT_MANAGER">PROJECT MANAGER</option>
-                        </select>
-                    </div>
+<!--                    <div class="mb-3">-->
+<!--                        <label for="u-type" class="form-label fw-bold">Loại phòng ban</label>-->
+<!--                        <select class="form-select form-select-sm" name="u-type" id="u-type">-->
+<!--                            <option value="DEVELOPER" selected>DEVELOPER</option>-->
+<!--                            <option value="TESTER">TESTER</option>-->
+<!--                            <option value="SCRUM_MASTER">SCRUM MASTER</option>-->
+<!--                            <option value="PROJECT_MANAGER">PROJECT MANAGER</option>-->
+<!--                        </select>-->
+<!--                    </div>-->
                 </form>
             </div>
             <div class="modal-footer">
@@ -78,8 +78,8 @@
             data: JSON.stringify({
                 id: id,
                 name: $('#u-name').val(),
-                totalMembers: $('#u-total-members').val(),
-                type: $('#u-type').val()
+                totalMembers: $('#u-total-members').val()
+                // , type: $('#u-type').val()
             }),
             beforeSend: () => $('#loading').show(),
             success: data => loadDepartments(),
@@ -98,7 +98,7 @@
             $('#u-id').val(row.find('.id').text());
             $('#u-name').val(row.find('.name').text());
             $('#u-total-members').val(row.find('.total-members').text());
-            $('#u-type').val(row.find('.type').text());
+            // $('#u-type').val(row.find('.type').text());
         });
     });
 </script>

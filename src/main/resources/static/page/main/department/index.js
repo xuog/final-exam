@@ -71,7 +71,7 @@ function loadDepartments() {
         size: $('#page-size').val(),
         sort: sort,
         search: $('#search').val(),
-        type: $('#type').val(),
+        // type: $('#type').val(),
         minCreatedYear: $('#min-created-year').val(),
         minTotalMembers: $('#min-total-accounts').val(),
         maxTotalMembers: $('#max-total-accounts').val(),
@@ -101,7 +101,7 @@ function showDepartments(departments) {
                 <th class='id'>${department.id}</th>
                 <td class='name'>${department.name}</td>
                 <td class='total-members'>${department.totalMembers}</td>
-                <td class='type'>${department.type}</td>
+<!--                <td class='type'>${department.type}</td>-->
                 <td class='created-at'>${department.createdAt}</td>
                 <td class='updated-at'>${department.updatedAt}</td>
             </tr>

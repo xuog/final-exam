@@ -27,11 +27,11 @@ public class DepartmentCreateForm {
     @NotNull(message = "Department total members must be NOT null.")
     private Integer totalMembers;
 
-    @Pattern(
-            regexp = "DEVELOPER|TESTER|SCRUM_MASTER|PROJECT_MANAGER",
-            message = "Department type must be DEVELOPER, TESTER, SCRUM_MASTER or PROJECT_MANAGER"
-    )
-    private String type;
+//    @Pattern(
+//            regexp = "DEVELOPER|TESTER|SCRUM_MASTER|PROJECT_MANAGER",
+//            message = "Department type must be DEVELOPER, TESTER, SCRUM_MASTER or PROJECT_MANAGER"
+//    )
+    //private String type;
 
     private List<@Valid Account> accounts;
     @Getter

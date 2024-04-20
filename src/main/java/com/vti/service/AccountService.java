@@ -75,13 +75,13 @@ public class AccountService implements IAccountService {
 
         repository.save(account);
         // dùng để refresh authentication "làm mới xác thức người dùng"
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        Authentication newAuth = new UsernamePasswordAuthenticationToken(
-                auth.getPrincipal(),
-                auth.getCredentials(),
-                AuthorityUtils.createAuthorityList(account.getRole().toString())
-        );
-        SecurityContextHolder.getContext().setAuthentication(newAuth);
+//        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+//        Authentication newAuth = new UsernamePasswordAuthenticationToken(
+//                auth.getPrincipal(),
+//                auth.getCredentials(),
+//                AuthorityUtils.createAuthorityList(account.getRole().toString())
+//        );
+//        SecurityContextHolder.getContext().setAuthentication(newAuth);
     }
 
     @Override

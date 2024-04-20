@@ -35,15 +35,15 @@
                             Số lượng nhân viên phải lớn hơn hoặc bằng 0.
                         </small>
                     </div>
-                    <div class="mb-3">
-                        <label for="c-type" class="form-label fw-bold">Loại phòng ban</label>
-                        <select class="form-select form-select-sm" name="c-type" id="c-type">
-                            <option value="DEVELOPER" selected>DEVELOPER</option>
-                            <option value="TESTER">TESTER</option>
-                            <option value="SCRUM_MASTER">SCRUM MASTER</option>
-                            <option value="PROJECT_MANAGER">PROJECT MANAGER</option>
-                        </select>
-                    </div>
+<!--                    <div class="mb-3">-->
+<!--                        <label for="c-type" class="form-label fw-bold">Loại phòng ban</label>-->
+<!--                        <select class="form-select form-select-sm" name="c-type" id="c-type">-->
+<!--                            <option value="DEVELOPER" selected>DEVELOPER</option>-->
+<!--                            <option value="TESTER">TESTER</option>-->
+<!--                            <option value="SCRUM_MASTER">SCRUM MASTER</option>-->
+<!--                            <option value="PROJECT_MANAGER">PROJECT MANAGER</option>-->
+<!--                        </select>-->
+<!--                    </div>-->
                 </form>
             </div>
             <div class="modal-footer">
@@ -66,8 +66,8 @@
             contentType: 'application/json; charset=utf-8',
             data: JSON.stringify({
                 name: $('#c-name').val(),
-                totalMembers: $('#c-total-members').val(),
-                type: $('#c-type').val()
+                totalMembers: $('#c-total-members').val()
+                // , type: $('#c-type').val()
             }),
             beforeSend: () => $('#loading').show(),
             success: data => loadDepartments(),
